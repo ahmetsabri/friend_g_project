@@ -23,6 +23,7 @@
           <tbody>
             @foreach($reservations as $reservation)
               <tr>
+                <td>{{$reservation['id']}}</td>
                 <td>{{$reservation['username']}}</td>
                 <td>{{$reservation['book']}}</td>
                 <td>{{$reservation['reciving_date']}}</td>

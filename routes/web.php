@@ -1,8 +1,6 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','BookController@home_page');
 
 Route::group(['middleware'=>['auth','is_admin'],'prefix'=>'admin'],function(){
 

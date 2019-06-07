@@ -8,6 +8,13 @@ use App\Reservation as reservation;
 class BookController extends Controller
 {
 
+
+  public function home_page()
+  {
+    $books = book::latest()->get();
+    return view('welcome')->with('books',$books);
+
+  }
     public function index()
     {
       $books = book::latest()->paginate(10);
